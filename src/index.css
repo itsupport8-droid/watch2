@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-900 text-slate-100 antialiased;
+}
+
+::selection {
+  background: rgba(137, 152, 109, 0.55);
+}
+
+.carousel-track {
+  animation: carousel-marquee 20s linear infinite;
+}
+
+.brand-track {
+  animation: brand-marquee 22s linear infinite;
+}
+
+@keyframes carousel-marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-33.3333%);
+  }
+}
+
+@keyframes brand-marquee {
+  from {
+    transform: translateX(-33.3333%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track,
+  .brand-track {
+    animation: none;
+    transform: none;
+  }
+}
