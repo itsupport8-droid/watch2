@@ -61,7 +61,7 @@ export default function NavbarComponent() {
             href="#featured"
             className="text-sm font-medium text-white/85 hover:text-white transition-colors"
           >
-            Featured
+            Featureddasds
           </a>
           <a
             href="#footer"
